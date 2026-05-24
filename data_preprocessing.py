@@ -1,9 +1,9 @@
 import pandas as pd
 
-# Load the original dataset
+
 df = pd.read_csv("npl2019.csv")
 
-# Drop columns with more than 50% missing values
+
 threshold = 0.5
 missing_ratio = df.isnull().sum() / len(df)
 columns_to_drop = missing_ratio[missing_ratio > threshold].index
@@ -30,5 +30,5 @@ if 'h17' in df.columns:
 df.to_csv("cleaned_npl2019.csv", index=False)
 
 # Show final info
-print("✅ Cleaned dataset saved as 'cleaned_npl2019.csv'")
-print("🎯 Heart disease distribution:\n", df['h17'].value_counts())
+print("Cleaned dataset saved as 'cleaned_npl2019.csv'")
+print(" Heart disease distribution:\n", df['h17'].value_counts())

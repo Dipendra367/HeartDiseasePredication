@@ -1,10 +1,19 @@
-# Ignore PyCharm and environment files
-.idea/
+# Virtual environment
 .venv/
+venv/
+
+# IDE
+.idea/
+
+# Python cache
 __pycache__/
 *.pyc
 
-# Ignore app and main temporarily
-app.py
-main.py
+# Data files
+*.csv
 
+# Pickle files
+*.pkl
+
+# Auto-generated plots
+plot_*.png
